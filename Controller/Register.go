@@ -9,10 +9,10 @@ import (
 )
 
 func Register(c *gin.Context) {
-	StudentId:=c.Query("StudentId")
-	Name:=c.Query("Name")
-	Password:=c.Query("Password")
-	Department:=c.Query("Department")
+	StudentId:=c.PostForm("StudentId")
+	Name:=c.PostForm("Name")
+	Password:=c.PostForm("Password")
+	Department:=c.PostForm("Department")
 	var exist bool
 	exist,err:= Model.CheckUserExist(StudentId)
 	if err!=nil {
