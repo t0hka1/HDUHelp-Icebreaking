@@ -15,7 +15,7 @@ func InitRouter()  {
 	router.NoRoute(api.NotFound)
 	v1:=router.Group("iceBreaking")
 	{
-		v1.GET("/register",api.Register)
+		v1.POST("/register",api.Register)
 		v1.POST("/login",api.Login)
 	}
 
